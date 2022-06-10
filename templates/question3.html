@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Harry Potter</h1>
+    <p>Score = {{session.get('score',0)}}</p>
+    <p>Pick the right option:</p><br>
+    <p>3. What is Harry's position in the Gryffindor Quidditch team?</p>
+    <img src="" alt="">
+
+    <form action="/question3" method="post">
+      <label for="">a.Keeper</label>
+      <input type="radio" name="option" id="" value="a">
+
+      <label for="">b.Beater</label>
+      <input type="radio" name="option" id="" value="b">
+
+      <label for="">c.Seeker</label>
+      <input type="radio" name="option" id="" value="c">
+
+      <label for="">d.Chaser</label>
+      <input type="radio" name="option" id="" value="d"><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+    {%if message%}
+    <h3>{{message}}</h3>
+    <a href="/question4"><button>Press this button to head to Question 4</button></a>
+    {%endif%}
+</body>
+</html>

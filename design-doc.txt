@@ -1,0 +1,18 @@
+DESIGN LOGIC FLOW FOR QUESTION
+
+Model - SQL - Database
+
+View - HTML/CSS
+    a. Create question1.HTML
+    b. Create a form (radio) containing one question with multiple choice
+    c. Submit the form as a POST request to ('/q1) 
+    d. Display the message received from cotroller in a variable format - {{}} - Jinja Template
+
+Controller - app.py
+    a. Create ('/q1) route with GET and POST methods (HTTP Requests)
+    b. For GET request - returning the template question1.html
+    c. Accept the user input and compare with correct answer
+    d. If the answer is correct - Success Response
+    e. Else - Failure Response
+
+Same Process for Question2 and so on....

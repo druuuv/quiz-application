@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Harry Potter</h1>
+    <p>Score = {{session.get('score',0)}}</p>
+    <p>Pick the right option:</p><br>
+    <p>2. How much would it cost a Muggle to travel on the Knight Bus?</p>
+    <img src="" alt="">
+
+    <form action="/question2" method="post">
+      <label for="">a.10 sickles</label>
+      <input type="radio" name="option" id="" value="a">
+
+      <label for="">b.Its absolutely free</label>
+      <input type="radio" name="option" id="" value="b">
+
+      <label for="">c.1 sickle</label>
+      <input type="radio" name="option" id="" value="c">
+
+      <label for="">d.Muggles can't see the Knight Bus</label>
+      <input type="radio" name="option" id="" value="d"><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+    {%if message%}
+    <h3>{{message}}</h3>
+    <a href="/question3"><button>Press this button to head to Question 3</button></a>
+    {%endif%}
+</body>
+</html>
